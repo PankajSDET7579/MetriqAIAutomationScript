@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="MetriqAI Rregression Suite" verbose="3">
+
+
+	<listeners>
+		<!--listener class-name="com.qa.MetriqAI.listeners.TestAllureReport" /-->
+		<listener class-name="com.qa.MetriqAI.listeners.ExtentReportTest" />
+		<listener class-name="com.qa.MetriqAI.listeners.AnnotationTransformer"></listener>
+	</listeners>
+	
+	<test name="LoginPageTest">
+		<parameter name="browser" value="chrome" />
+		<classes>
+			<class name="com.qa.MetriqAI.Test.LoginPageTest" />
+		</classes>
+	</test>
+
+	<test name="HomePageTest">
+		<parameter name="browser" value="chrome" />
+		<classes>
+			<class name="com.qa.MetriqAI.Test.HomePageTest" />
+		</classes>
+	</test>
+
+	<test name="SurveyListPageTest">
+		<parameter name="browser" value="chrome" />
+		<classes>
+			<class name="com.qa.MetriqAI.Test.SurveyListPageTest" />
+		</classes>
+	</test>
+
+	<test name="CreateProjectTemplatePageTest">
+		<parameter name="browser" value="chrome" />
+		<parameter name="incognito" value="false" />
+		<parameter name="headless" value="false" />
+		<classes>
+			<class name="com.qa.MetriqAI.Test.CreateProjectTemplatePageTest" />
+		</classes>
+	</test>
+
+	<test name="CreateProjectGeneralDetailPageTest">
+		<parameter name="browser" value="chrome" />
+		<parameter name="incognito" value="false" />
+		<parameter name="headless" value="false" />
+		<classes>
+			<class
+				name="com.qa.MetriqAI.Test.CreateProjectGeneralDetailPageTest" />
+		</classes>
+	</test>
+
+	<test name="CreateProjectGeographyPageTest">
+		<parameter name="browser" value="chrome" />
+		<parameter name="incognito" value="false" />
+		<parameter name="headless" value="false" />
+		<classes>
+			<class name="com.qa.MetriqAI.Test.CreateProjectGeographyPageTest" />
+		</classes>
+	</test>
+
+	<test name="CreateSurveySelectMetricesPageTest">
+		<parameter name="browser" value="chrome" />
+		<parameter name="incognito" value="false" />
+		<parameter name="headless" value="false" />
+		<classes>
+			<class
+				name="com.qa.MetriqAI.Test.CreateSurveySelectMetricesPageTest" />
+		</classes>
+	</test>
+
+	<test name="QuestionBuilderPageTest">
+		<parameter name="browser" value="chrome" />
+		<parameter name="incognito" value="false" />
+		<parameter name="headless" value="false" />
+		<classes>
+			<class name="com.qa.MetriqAI.Test.QuestionBuilderPageTest" />
+		</classes>
+	</test>
+
+	<test name="ManageSurveyFlowPageTest">
+		<parameter name="browser" value="chrome" />
+		<parameter name="incognito" value="false" />
+		<parameter name="headless" value="false" />
+		<classes>
+			<class name="com.qa.MetriqAI.Test.ManageSurveyFlowPageTest" />
+		</classes>
+	</test>
+
+	<test name="ThemePageTest">
+		<parameter name="browser" value="chrome" />
+		<parameter name="incognito" value="false" />
+		<parameter name="headless" value="false" />
+		<classes>
+			<class name="com.qa.MetriqAI.Test.ThemePageTest" />
+		</classes>
+	</test>
+
+	<test name="DatabasePageTest">
+		<parameter name="browser" value="chrome" />
+		<parameter name="incognito" value="false" />
+		<parameter name="headless" value="false" />
+		<classes>
+			<class name="com.qa.MetriqAI.Test.DatabasePageTest" />
+		</classes>
+	</test>
+
+	<test name="EmailPageTest">
+		<parameter name="browser" value="chrome" />
+		<parameter name="incognito" value="false" />
+		<parameter name="headless" value="false" />
+		<classes>
+			<class name="com.qa.MetriqAI.Test.EmailPageTest" />
+		</classes>
+	</test>
+
+	<test name="QuotaPageTest">
+		<parameter name="browser" value="chrome" />
+		<parameter name="incognito" value="false" />
+		<parameter name="headless" value="false" />
+		<classes>
+			<class name="com.qa.MetriqAI.Test.QuotaPageTest" />
+		</classes>
+	</test>
+
+	<test name="PublishSurveyPageTest">
+		<parameter name="browser" value="chrome" />
+		<parameter name="incognito" value="false" />
+		<parameter name="headless" value="false" />
+		<classes>
+			<class name="com.qa.MetriqAI.Test.PublishSurveyPageTest" />
+		</classes>
+	</test>
+
+
+</suite>

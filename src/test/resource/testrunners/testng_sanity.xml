@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="MetriqAI Rregression Suite" verbose="10" >
+	
+	<listeners>
+		<!--listener class-name="com.qa.MetriqAI.listeners.TestAllureReport" /-->
+		<listener class-name="com.qa.MetriqAI.listeners.ExtentReportTest" />
+		<listener class-name="com.qa.MetriqAI.listeners.AnnotationTransformer"></listener>
+	</listeners>
+	
+	<test name="PublishSurveyPageTest">
+		<parameter name="browser" value="chrome"/>
+		<classes>
+			<class name="com.qa.MetriqAI.Test.LoginPageTest"/>
+		</classes>
+		
+	</test>
+</suite>
+
+
