@@ -7,6 +7,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
+import com.qa.MetriqAI.Exceptions.ElementException;
 import com.qa.MetriqAI.Utils.ElementUtil;
 
 public class SurveyListPage {
@@ -32,7 +33,8 @@ public class SurveyListPage {
 	private By createSurveyButton=
 			By.xpath("//button[normalize-space(text())='Create Project']");
 	
-	
+	private By allProjectNamesInList =
+			By.xpath("//a[@class='text-primary']");
 	
 	public String getWelcomeText() {
 		String data = eutil.doGetText(surveyListWelcomeText);
@@ -76,6 +78,24 @@ public class SurveyListPage {
 	public CreateProjectTemplatePage clickOnCreateProjectButton() {
 		eutil.doClickOnElement(createSurveyButton);
 		return new CreateProjectTemplatePage(driver);
+	}
+	
+	public String checkStausOfSurvey(String projectName) {
+		By status =By.xpath("//a[text()='"+projectName+"']/ancestor::td/following-sibling::td[5]");
+		String surveyStatus = eutil.elementVisibility(status, 10).getText();
+		return surveyStatus;
+	}
+	
+	public ProjectDetailPage clickOnProjectName(String projectName) {
+		List<WebElement> projectNamesList = eutil.allElementsVisibility(allProjectNamesInList, 10);
+		for(WebElement name: projectNamesList) {
+			if(name.equals(projectName)) {
+				name.click();
+				break;
+			}
+			throw new ElementException("No such Project found in first page");
+		}
+		return new ProjectDetailPage();	
 	}
 
 }
