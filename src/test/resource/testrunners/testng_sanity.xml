@@ -6,7 +6,7 @@
 	<listeners>
 		<!--listener class-name="com.qa.MetriqAI.listeners.TestAllureReport" /-->
 		<listener class-name="com.qa.MetriqAI.listeners.ExtentReportTest" />
-		<listener class-name="com.qa.MetriqAI.listeners.AnnotationTransformer"></listener>
+		<listener class-name="com.qa.MetriqAI.listeners.AnnotationTransformer" />
 	</listeners>
 	
 	<test name="PublishSurveyPageTest">
